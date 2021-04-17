@@ -1,5 +1,5 @@
 # Pscc Hospital App
-Pscc is a Hospital Flutter Mobile App for Prince Sultan Cardiac Center with Filerole Inc. 
+Pscc is a Hospital Cross-Platform Mobile App for Prince Sultan Cardiac Center with Filerole Inc. 
 
 For App's Video Screen record:
 https://drive.google.com/drive/u/0/folders/1ASqtHwBCE72p4FV50osfJmPS3wZPedqZ
