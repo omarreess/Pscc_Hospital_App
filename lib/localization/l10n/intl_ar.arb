@@ -1,0 +1,18 @@
+{
+  "navProfile": "حسابي",
+  "navHome": "الرئيسية",
+  "navServ": "خدمات",
+  "chooseAuth": "اختر نوع المستخدم",
+  "quickAccess": "الوصول السريع",
+  "latestNews": "أهم الأخبار",
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "forgetPass": "نسيت كلمة المرور",
+  "loginBtn": "سجل",
+  "admin": "مسؤل",
+  "patient": "مريض",
+  "doctor": "طبيب"
+
+
+}

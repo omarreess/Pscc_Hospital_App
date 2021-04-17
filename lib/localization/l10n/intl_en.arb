@@ -1,0 +1,17 @@
+{
+  "navProfile": "Profile",
+  "navHome": "Home",
+  "navServ": "Services",
+  "chooseAuth": "Choose User Type",
+  "quickAccess": "Quick Access",
+  "latestNews": "Latest News",
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "forgetPass": "Forget Passwrod",
+  "loginBtn": "Login",
+  "admin": "Admin",
+  "patient": "Patient",
+  "doctor": "Doctor"
+
+}
