@@ -1,4 +1,4 @@
-# newmed
+# Pscc Hospital App
 
 A new Flutter application.
 
