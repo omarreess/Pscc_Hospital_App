@@ -4,15 +4,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:newmed/localization/generated/l10n.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/HospitalBanner.dart';
 
  import '../main.dart';
+import 'HospitalBanner.dart';
 
 class ChooseAuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: true,
       appBar:  AppBar(title: Text('BSCC',style: TextStyle(fontSize: 18,color:Colors.black54),),centerTitle: true,backgroundColor: Colors.white,elevation: 0,),
       body: Container(
         width:double.infinity,
@@ -34,7 +34,7 @@ class ChooseAuthScreen extends StatelessWidget {
 
                  Container(
                   margin: const EdgeInsets.only(left:17,right:17 , top : 0.0 ),
-                  child: Text (S.of(context).chooseAuth ,
+                  child: Text (S.of(context)!.chooseAuth ,
                     style: TextStyle(fontSize:33 ,height: 1.9, color: clrGreen.withOpacity(0.8),fontWeight: FontWeight.w600  ),),
                 ),
                 Divider(height:13,color: Colors.transparent,),
@@ -45,13 +45,13 @@ class ChooseAuthScreen extends StatelessWidget {
                       Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Expanded(
-                          child: userTypeGrid(context,'assets/doctor.svg' , S.of(context).doctor)
+                          child: userTypeGrid(context,'assets/doctor.svg' , S.of(context)!.doctor)
                         ),
                           Expanded(
-                            child: userTypeGrid(context,'assets/admin.svg' , S.of(context).admin)
+                            child: userTypeGrid(context,'assets/admin.svg' , S.of(context)!.admin)
                           ),
                       ],),
-                      userTypeGrid(context,'assets/patient.svg' , S.of(context).patient)
+                      userTypeGrid(context,'assets/patient.svg' , S.of(context)!.patient)
 
                     ],
                   ),

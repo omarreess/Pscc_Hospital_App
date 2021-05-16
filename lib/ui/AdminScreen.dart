@@ -2,13 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:newmed/localization/generated/l10n.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/ChooseAuth.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/ProfileScreen.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/ServicesScreen.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/SettingsScreen.dart';
 
+
+import 'ChooseAuth.dart';
 import 'HomeScreen.dart';
  import '../main.dart';
+import 'ServicesScreen.dart';
 
 class AdminScreen extends StatefulWidget {
 
@@ -92,17 +91,17 @@ class _AdminScreenState extends State<AdminScreen> {
 
                   icon: Icons.home_outlined,
                   iconColor:Colors.lightGreen ,
-                  text: S.of(context).navHome,
+                  text: S.of(context)!.navHome,
                 ),
                 GButton(
                   icon: Icons.airline_seat_individual_suite_outlined,
                   iconColor:Colors.blueAccent ,
-                  text: S.of(context).navServ,
+                  text: S.of(context)!.navServ,
                 ),
                 GButton(
                   icon: Icons.account_circle_outlined,
                   iconColor:Colors.redAccent ,
-                  text: S.of(context).navProfile,
+                  text: S.of(context)!.navProfile,
                 ),
 
               ],

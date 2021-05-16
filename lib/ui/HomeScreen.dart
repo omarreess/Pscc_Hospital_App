@@ -4,11 +4,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newmed/localization/generated/l10n.dart';
-import 'file:///E:/Dart/Filerole/newmedical/newmed/lib/ui/HospitalBanner.dart';
-import 'package:newmed/model/NewsModel.dart';
+ import 'package:newmed/model/NewsModel.dart';
 import 'package:provider/provider.dart';
 
  import '../main.dart';
+import 'HospitalBanner.dart';
 
  List quickArr = [
    'Medical Privilees','Lexicomp','Dortal' ,'Nurtal',
@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: const EdgeInsets.only(left:15  ,right: 15, top : 0.0 ),
                   child: Text (
 
-                    S.of(context).quickAccess,
+                    S.of(context)!.quickAccess,
 
                     textAlign: TextAlign.start,
 
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),),
                 Container(
                   margin: const EdgeInsets.only(left:15 ,right: 15, top : 0.5 ),
-                  child: Text (S.of(context).latestNews, style: TextStyle(fontSize:30 ,height: 1.9, color: clrGreenLight,fontWeight: FontWeight.w600  ),),
+                  child: Text (S.of(context)!.latestNews, style: TextStyle(fontSize:30 ,height: 1.9, color: clrGreenLight,fontWeight: FontWeight.w600  ),),
                 ),
                 Container(width: double.infinity,height: 400,child:
                 Scrollbar(controller:ScrollController() ,thickness: 4.5,
@@ -148,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                                 child: ClipRRect(
                                   borderRadius:BorderRadius.circular(10) ,
-                                  child: Image.network(newsArr[index].imgUrl ,height: 190,
+                                  child: Image.network(newsArr[index].imgUrl! ,height: 190,
                                     width: double.infinity ,fit: BoxFit.cover,
                                   ),
                                 )
@@ -156,12 +156,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           Container(
                             margin: const EdgeInsets.only(left:20 , top : 4,right:20 ),
-                            child: Text (newsArr[index].head,textDirection:TextDirection.rtl, style: TextStyle(fontSize:20 ,height: 1.35, color: clrRed.withOpacity(0.8),fontWeight: FontWeight.bold  ),),
+                            child: Text (newsArr[index].head!,textDirection:TextDirection.rtl, style: TextStyle(fontSize:20 ,height: 1.35, color: clrRed.withOpacity(0.8),fontWeight: FontWeight.bold  ),),
                           ),
 
                           Container(
                             margin: const EdgeInsets.only(left:22 , top : 10,bottom: 10,right: 22 ),
-                            child: Text ( newsArr[index].body,textDirection:TextDirection.rtl,  maxLines: 3,style: TextStyle(fontSize:14.6 ,height: 1.5, color: Colors.black54,fontWeight: FontWeight.w100  ),),
+                            child: Text ( newsArr[index].body!,textDirection:TextDirection.rtl,  maxLines: 3,style: TextStyle(fontSize:14.6 ,height: 1.5, color: Colors.black54,fontWeight: FontWeight.w100  ),),
                           ),                      ],
                       ),
                     ),

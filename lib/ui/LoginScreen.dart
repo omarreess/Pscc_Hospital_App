@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
 
               Center(child: Image(image: AssetImage('assets/login.png') ,width: 260,height: 220,)),
                 Divider(height: 28 , color: Colors.transparent,),
-             Container(padding: EdgeInsets.symmetric(horizontal: 22), child: Text(S.of(context).login  ,style: TextStyle(height:1.6,fontSize: 44,fontWeight: FontWeight.w500,color: Colors.black54),)),
+             Container(padding: EdgeInsets.symmetric(horizontal: 22), child: Text(S.of(context)!.login  ,style: TextStyle(height:1.6,fontSize: 44,fontWeight: FontWeight.w500,color: Colors.black54),)),
               Divider(height: 7 , color: Colors.transparent,),
 
               Container(
@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
       ),
       //hintText: hintText,
       border: InputBorder.none,
-           hintText: S.of(context).email
+           hintText: S.of(context)!.email
       ),
       ),
     )
@@ -73,7 +73,7 @@ color: clrWhiteDrk ,
 
   //  color: kPrim//aryColor,
       ),
-      hintText: S.of(context).password,
+      hintText: (S.of(context)!.password),
       border: InputBorder.none,
       ),
       ),
@@ -86,7 +86,7 @@ color: clrWhiteDrk ,
                 child: GestureDetector(
 
                   child: Text(
-                    S.of(context).forgetPass,
+                    (S.of(context)!.forgetPass),
                    textAlign: TextAlign.end,
                    style: TextStyle(fontSize: 14 , color: Colors.black54,fontWeight: FontWeight.normal),
                     ),
@@ -116,7 +116,7 @@ color: clrWhiteDrk ,
     },
     child: Text(
 
-        S.of(context).loginBtn,
+        (S.of(context)!.loginBtn),
 
     style: TextStyle( color: Colors.white,height: 1, fontSize: 16,fontWeight: FontWeight.bold),
     ),

@@ -19,7 +19,7 @@ class ServicesScreen extends StatefulWidget {
 
 class _ServicesScreenState extends State<ServicesScreen> {
 
-  List curentArr = new List();
+  List curentArr = List<dynamic>.empty(growable: true);
   @override
   void initState() {
      super.initState();

@@ -17,7 +17,7 @@ class PatientScreen extends StatefulWidget {
 
 class _PatientScreenState extends State<PatientScreen> {
   //Webview Controller
-  InAppWebViewController webView;
+  late InAppWebViewController webView;
   //    _webViewController?.reload();
 
   bool isLoading = true ;
@@ -51,27 +51,30 @@ class _PatientScreenState extends State<PatientScreen> {
 
           InAppWebView(
            gestureRecognizers: Set() ..add (Factory<VerticalDragGestureRecognizer>(()=> VerticalDragGestureRecognizer()) ),
-            initialUrl: "https://patientservices.pscc.med.sa/Login",
-            initialHeaders: {},
+            initialUrlRequest: URLRequest(
+                url: Uri.parse("https://patientservices.pscc.med.sa/Login")
+            ),
+
 
             onWebViewCreated: (InAppWebViewController controller) {
 
               webView = controller;
             },
-            onLoadStart: (InAppWebViewController controller, String url) {
 
-            },
-            onLoadStop: (InAppWebViewController controller, String url) {
 
-              setState(() {
-                isLoading = false;
-              });
-            },
+          onLoadStop :(controller, url) async {
+            setState(() {
+              isLoading = false;
+            });
+          },
 
-            onReceivedServerTrustAuthRequest: (InAppWebViewController controller, ServerTrustChallenge challenge) async {
+            onReceivedServerTrustAuthRequest: (InAppWebViewController controller,   challenge) async {
               return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
             },
           ),
+
+
+
           (isLoading)? Align(
             alignment: Alignment.topCenter,
             child: LinearProgressIndicator(
